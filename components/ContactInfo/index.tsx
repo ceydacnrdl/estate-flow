@@ -8,18 +8,18 @@ export default function ContactInfo() {
   return (
     <div className="flex justify-between w-full text-blue-900 text-xl">
       <div className="bg-blue-400 p-10 w-full relative text-blue-950 flex  justify-center items-center content-center">
-        <div className="pr-4">
+        <a href="https://goo.gl/maps/9D3aEUQjeFuXpvyM6" className="pr-4">
           <Phone />
-        </div>
+        </a>
         <div>
           <div className="font-bold">Bizi Arayın</div>
           <div>{content.footer.whatsapp}</div>
         </div>
       </div>
       <div className="bg-blue-900 p-10 w-full !text-white flex justify-center items-center content-center">
-        <div className="pr-4">
+        <a href="tel:90-224-241-51-35" className="pr-4">
           <Whatsapp />
-        </div>
+        </a>
         <div>
           <div className="font-bold">Whatsapp</div>
           <div>{content.footer.phone}</div>

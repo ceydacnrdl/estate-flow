@@ -49,8 +49,8 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 5vw;
-    width: 100vw;
-    height: 36vw;
+    /* width: 100vw;
+    height: 36vw; */
     flex-shrink: 0;
   }
 

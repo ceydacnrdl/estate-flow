@@ -5,14 +5,17 @@ import useEmblaCarousel from "embla-carousel-react";
 import Fade from "embla-carousel-fade";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
-import img from "../../public/banner.jpeg";
-import img1 from "../../public/banner1.jpeg";
-import img2 from "../../public/banner2.jpeg";
+
 import ArrowChevronRight from "@/icons/ArrowChevronRight";
+import { clsx } from "yet-another-react-lightbox";
 
-const slides = [img.src, img1.src, img2.src];
-
-export default function EmblaCarousel() {
+export default function EmblaCarousel({
+  slides,
+  index,
+}: {
+  slides: any[];
+  index?: number;
+}) {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: true,
@@ -24,22 +27,30 @@ export default function EmblaCarousel() {
   );
 
   useEffect(() => {
-    if (emblaApi) {
+    if (emblaApi && index !== undefined) {
+      emblaApi.scrollTo(index);
     }
-  }, [emblaApi]);
+  }, [emblaApi, index]);
 
   return (
     <>
       <div className="relative">
         <div className="viewport" ref={emblaRef}>
           <div className="container">
-            {slides.map((item, index) => (
-              <div key={`slide-${index}`} className="slide">
+            {slides.map((item: any, index: any) => (
+              <div
+                key={`slide-${index}`}
+                className={clsx(
+                  typeof item === "string"
+                    ? "slide w-[100vw] h-[36vw]"
+                    : "slide w-[60vw] h-[36vw]"
+                )}
+              >
                 <Image
-                  src={item}
-                  alt={`Slide ${index}`}
+                  src={typeof item === "string" ? item : item.src}
+                  alt={typeof item === "string" ? `Slide ${index}` : item.alt}
                   layout="fill"
-                  objectFit="cover"
+                  objectFit={typeof item === "string" ? "cover" : "contain"}
                 />
               </div>
             ))}
