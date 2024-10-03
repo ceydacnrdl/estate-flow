@@ -1,0 +1,30 @@
+{
+  "menu": [
+    "Anasayfa",
+    "Hakkımızda",
+    "Kurullarımız",
+    "Duyurular",
+    "Çalışmalarımız",
+    "Galeri",
+    "Aidat Sorgula",
+    "İletişim"
+  ],
+  "about": {
+    "title": "Hakkımızda",
+    "subTitle": "Korupark Evleri",
+    "content1": "Sitemiz 2007 yılında sakinlerimize kapılarını açmıştır.",
+    "content2": "20 bin metrekarenin üzerinde bir alana kurulmuş sitemizde 13 blokta toplam 753 daire vardır. Sitemiz Korupark AVM ile bitişiktir ve site içinden AVM ye geçiş vardır. Sitemizde sakinlerimiz ve misafirleri için 1200 araçlık kapalı bir otoparkımız bulunmaktadır."
+  },
+  "footer": {
+    "title": "Bize Ulaşın",
+    "links": [
+      { "name": "Home", "url": "/" },
+      { "name": "About", "url": "/about" },
+      { "name": "Contact", "url": "/contact" }
+    ],
+    "whatsapp": "0536 266 44 14",
+    "phone": "(0224) 241 51 35",
+    "address": "Emek Adnan Menderes Mahallesi Armağan Sokak No:1, 16150 Osmangazi/Bursa",
+    "email": "bilgi@koruparkevleri.com"
+  }
+}
